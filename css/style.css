@@ -1,0 +1,390 @@
+:root {
+    --dark-color: #12283f;
+    --green-color: #33d1cc;
+    --btn-color: #ff4651;
+    --yellow-color: #ecb21e;
+    --beu-opa-color: #09abbf;
+    --beu-color: #6fcdc4;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.btn-main {
+    background-color: var(--btn-color);
+    color: var(--yellow-color);
+}
+
+.btn-main:focus {
+    box-shadow: none
+}
+
+
+/* Srart Header */
+
+.header .navbar {
+    background-color: var(--dark-color);
+}
+
+.header .navbar .container a img {
+    width: 100px;
+    height: 50px;
+}
+
+.header .navbar .navbar-toggler {
+    color: #eee;
+    border: 1px solid #eee;
+    font-size: 21px;
+}
+
+.header .navbar ul li a {
+    color: #fff;
+}
+
+.header .navbar ul li a:hover,
+.header .navbar ul li a.active,
+.header .navbar .search button:hover {
+    color: var(--green-color);
+}
+
+.header .navbar .search svg {
+    color: #EEE;
+    border-left: 1px solid #eee;
+}
+
+.header .navbar .search button,
+.landing button {
+    background-color: var(--btn-color);
+    transition: .2s;
+}
+
+.header .navbar .search button:focus,
+.landing button:focus {
+    box-shadow: none;
+}
+
+.header .navbar .search button:active,
+.landing button:active,
+.our-teams .officer button:active>a,
+.subscribe button:active,
+.footer .contact-us button:active {
+    transform: translateY(2px);
+}
+
+
+/* End Header */
+
+
+/* Start Landing */
+
+.landing {
+    background-color: var(--dark-color);
+    min-height: calc(100vh - 76px);
+}
+
+
+/* End Landing */
+
+
+/* Start Already Component */
+
+.our-logo svg {
+    color: var(--yellow-color) !important;
+    font-size: 100px;
+}
+
+.our-logo hr {
+    width: 25%;
+    height: 3px;
+    margin: auto;
+    background-color: var(--beu-color);
+}
+
+.our-logo p:last-child {
+    width: 20em !important;
+}
+
+
+/* End Already Component */
+
+
+/* Start Featurs  */
+
+.featurs h3 {
+    color: var(--yellow-color);
+}
+
+.featurs svg {
+    color: var(--beu-color)
+}
+
+.featurs .row .featurs-section::after {
+    position: absolute;
+    content: attr(data-count);
+    top: -16.6rem;
+    left: 37%;
+    transform: translateX(-50%);
+    font-size: 18rem;
+    width: 100px;
+    height: 100px;
+    color: #09aabf13;
+    z-index: -1;
+}
+
+@media (max-width:567px) {
+    .featurs .row>div {
+        margin-top: 115px;
+    }
+    .featurs .row .featurs-section::after {
+        left: 40%;
+        top: -17rem
+    }
+}
+
+@media (min-width:567px) {
+    .featurs .row .featurs-section::after {
+        left: 42%;
+    }
+    .featurs .row>div {
+        margin-top: 115px;
+    }
+}
+
+@media (min-width:767px) {
+    .featurs .row>div {
+        margin-top: 140px;
+    }
+    .featurs .row .featurs-section::after {
+        left: 37%;
+    }
+}
+
+@media (max-width:991px) {
+    .featurs .row .featurs-section {
+        margin-top: 10px;
+    }
+}
+
+.featurs p {
+    opacity: .6;
+}
+
+
+/* End Featurs  */
+
+
+/* Start Portofolio */
+
+.portofolio {
+    background-color: #f0f5fc
+}
+
+.portofolio .navbar ul li a.active {
+    color: var(--green-color) !important;
+    background-color: var(--btn-color);
+}
+
+.portofolio .navbar ul li a:hover {
+    color: var(--green-color) !important;
+}
+
+.portofolio .imgs-container {
+    height: 13rem;
+}
+
+.portofolio .imgs-container img {
+    width: 98%;
+    transition: .2s;
+}
+
+.portofolio .imgs-container a {
+    border: 1px solid #FFF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #f5f5f5;
+    z-index: 3;
+    transition: .3s;
+    opacity: 0;
+    box-shadow: 0px 9px 32px 4px #eee;
+}
+
+.portofolio .imgs-container::after {
+    content: '';
+    position: absolute;
+    width: 98%;
+    height: 100%;
+    top: 0;
+    left: 1%;
+    background-color: rgba(34, 34, 34, 0.555);
+    z-index: 1;
+    opacity: 0;
+    transition: .3s;
+}
+
+.portofolio .imgs-container:hover a,
+.portofolio .imgs-container:hover::after {
+    opacity: 1;
+}
+
+@media (max-width:576px) {
+    .portofolio .container-fluid {
+        margin-left: -32px;
+    }
+}
+
+
+/* End Portofolio */
+
+
+/* Start Stuff */
+
+.left-box button {
+    width: 9rem
+}
+
+.img-box {
+    margin-top: 20px !important;
+}
+
+.img-box img {
+    width: 30em;
+    height: 20em;
+}
+
+@media (max-width:991px) {
+    .img-box img {
+        height: 12em
+    }
+}
+
+
+/* End Stuff */
+
+
+/* Start Our Team */
+
+.our-teams {
+    background-color: #f0f5fc;
+}
+
+.our-teams h1 {
+    color: var(--yellow-color);
+}
+
+.our-teams .officerq h4 {
+    background-color: var(--beu-opa-color);
+}
+
+.our-teams .officerq blockquote {
+    width: 85%;
+}
+
+@media (max-width:567px) {
+    .our-teams .officerq img,
+    .our-teams .officerq h4,
+    .our-teams .officerq blockquote {
+        width: 70%;
+        margin: auto;
+    }
+    .our-teams .officerq h4 {
+        margin-bottom: 3px !important;
+    }
+}
+
+
+/* End Our Team */
+
+
+/* Start Project */
+
+.start-project {
+    background-color: var(--dark-color);
+}
+
+
+/* End  Project */
+
+
+/* Start Sunscribe */
+
+.subscribe {
+    background-color: var(--yellow-color);
+}
+
+.subscribe .row div:first-child {
+    color: #eee !important;
+}
+
+.subscribe button {
+    background-color: var(--dark-color);
+    transition: .1s;
+}
+
+.subscribe button:hover {
+    color: #fff;
+}
+
+.subscribe input {
+    border: none;
+    border-bottom: 1px solid #eee;
+    width: 90%;
+    outline: none;
+    color: #fff;
+}
+
+@media (max-width:567px) {
+    .subscribe input {
+        width: 70%;
+        display: block;
+    }
+}
+
+.subscribe input::placeholder {
+    color: #eee;
+}
+
+
+/* End Sunscribe */
+
+
+/* Start Footer */
+
+.footer {
+    background-color: var(--dark-color)
+}
+
+.footer .copy-tight span:first-child {
+    color: var(--beu-opa-color);
+}
+
+.footer .copy-tight span:last-child {
+    color: var(--yellow-color)
+}
+
+.footer .contact-us button {
+    transition: .1s;
+}
+
+.footer .contact-us ul li:first-child a {
+    color: #2c6df8 !important;
+}
+
+.footer .contact-us ul li:nth-child(2) a {
+    color: #de5246;
+}
+
+.footer .contact-us ul li:nth-child(3) a {
+    color: #00acee;
+}
+
+.footer .contact-us ul li:nth-child(4) a {
+    color: #25D366;
+}
+
+
+/* End Footer */
